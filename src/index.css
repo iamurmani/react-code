@@ -2,6 +2,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
 
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87);
@@ -24,10 +26,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  /* place-items: center; */
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -67,4 +65,62 @@ ul {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.chat-app {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 50vw;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.chat-window {
+  flex: 1; /* Take up remaining space after InputBox */
+  overflow-y: scroll;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  /* display: inline-block; */
+}
+
+.you {
+  background-color: #ddd;
+  /* float: right; */
+}
+
+.gemini {
+  background-color: #fff;
+  /* float: left; */
+}
+
+.input-box {
+  display: flex;
+  width: 100%;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
